@@ -77,11 +77,11 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
         try {
             bus.close();
         } catch (IOException e) {
             Log.e("TUT", GREEN_LED_PIN + " bus cannot be closed, you may experience errors on next launch.", e);
         }
+        super.onDestroy();
     }
 }
